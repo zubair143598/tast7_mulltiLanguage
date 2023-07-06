@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import { appWithTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
+import { appWithTranslation } from 'next-i18next';
 import i18n from '../components/I18n';
 
 import "@/styles/globals.scss";
