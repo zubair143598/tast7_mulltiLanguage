@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 const LanguageSwitcher = () => {
   const router = useRouter();
   const { i18n } = useTranslation();
-  const [selectedLanguage, setSelectedLanguage] = useState('en');
+  const [selectedLanguage, setSelectedLanguage] = useState('');
   const [isContentVisible, setIsContentVisible] = useState(false);
 
   useEffect(() => {
@@ -16,11 +16,11 @@ const LanguageSwitcher = () => {
       i18n.changeLanguage(language);
     }
 
-    const timer = setTimeout(() => {
-      setIsContentVisible(true);
-    }, 100);
+    // const timer = setTimeout(() => {
+    //   setIsContentVisible(true);
+    // }, 0);
 
-    return () => clearTimeout(timer);
+    // return () => clearTimeout(timer);
   }, []);
 
   const handleChangeLanguage = (event) => {
@@ -31,7 +31,7 @@ const LanguageSwitcher = () => {
   };
 
   return (
-    <div className={`flex justify-center ${isContentVisible ? '' : 'hidden'}`}>
+    <div className={`flex justify-center `}>
       <Select
         className="bg-white mt-3"
         value={i18n.language}
