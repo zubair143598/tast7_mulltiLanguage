@@ -16,7 +16,7 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
   const getTextAlign = () => {
-    return i18n.language === 'ur' ? 'flex flex-col items-end ' : 'flex flex-col items-start';
+    return i18n.language === 'ur' ? 'text-right ' : 'text-left';
   };
 
   return (
@@ -37,7 +37,7 @@ export default function Home() {
               <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg" width={300} alt="" />
             
           <div className=' text-center flex flex-col  '>
-            <p>asdasd</p>
+            
           <img src="https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510_1280.jpg" width={300} className='mt-3 ' alt="" />
           </div>
         </div>
